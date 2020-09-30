@@ -17,6 +17,10 @@ module.exports = function (app) {
       allowNull: false
     },
   
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   
   }, {
     hooks: {
