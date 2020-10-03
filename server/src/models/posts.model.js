@@ -5,30 +5,11 @@ const DataTypes = Sequelize.DataTypes;
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
-  const users = sequelizeClient.define('users', {
-  
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
-    },
-    password: {
+  const posts = sequelizeClient.define('posts', {
+    text: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-  
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
-    },
-
-    isadmin: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: true
     }
-  
   }, {
     hooks: {
       beforeCount(options) {
@@ -38,10 +19,10 @@ module.exports = function (app) {
   });
 
   // eslint-disable-next-line no-unused-vars
-  users.associate = function (models) {
+  posts.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
-  return users;
+  return posts;
 };

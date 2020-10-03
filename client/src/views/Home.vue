@@ -18,11 +18,6 @@
       </p>
       </div>
     </div>
-      <ul class="links">
-        <li><a href="https://github.com/symienMoore"><i class="fab fa-github fa-2x"></i></a> </li>
-        <li><a href="https://www.instagram.com/mynameissymi/"><i class="fab fa-instagram-square fa-2x"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/symien-moore/"><i class="fab fa-linkedin fa-2x"></i></a></li>
-      </ul>
   </div>
 </template>
 
@@ -67,21 +62,6 @@ export default {
     width: 500px;
     font-size: 13px;
     margin-top: 30px;
-  }
-
-  .links {
-    display: flex;
-    margin-top: 60px;
-  }
-
-  .links li {
-    list-style-type: none;
-    margin-left: 20px;
-  }
-
-  .links li a {
-    color: gray;
-    
   }
 
   @media only screen and (max-width: 500px) {

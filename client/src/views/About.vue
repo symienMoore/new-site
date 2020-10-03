@@ -1,36 +1,26 @@
 <template>
   <div class="container">
-  <input type="text" v-model="message">
-  <div class="msg">
-  {{ message }}
-  </div>
-    <div class="img-holder">
-    <button class="btn" @click="getData">click me</button>
+    <div class="holder">
+     <img src="../assets/aboutHeader.png" alt="" width="300">
+     <div class="frontend">
+      
+    </div>
+    <div class="backend"></div>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
 export default {
-  data() {
-    return {
-      message: " ",
-      reversed: false
-    }
-  }, 
+  data: () => ({
 
-  methods: {
-    getData() {
-      axios.get('https://jsonplaceholder.typicode.com/posts')
-      .then(res => {
-        console.log(res.data)
-      })
-    }
+  }),
+
+  mounted: () => {
+    
   }
 }
 </script>
 
 <style>
-  
 </style>
