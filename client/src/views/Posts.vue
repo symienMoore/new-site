@@ -1,15 +1,13 @@
 <template>
-  <div>
-  <div v-for="post in posts" :key="post.id" class="posts">
-    <h4 class="title">{{ post.title }}</h4>
-    <div class="desc">
-      <p>{{ post.description }}</p>
+  <div class="holder">
+    <div v-for="post in posts" :key="post.id" class="posts">
+        <h4 class="title">{{ post.title }}</h4>
     </div>
-  </div>
   </div>
 </template>
 
 <script>
+// import { mapState } from 'vuex'
 export default {
 data: () => ({
     posts: []
@@ -17,24 +15,29 @@ data: () => ({
 
   mounted() {
     this.posts = this.$store.getters.getAllPosts
-  },
-
-
+    console.log(this.$store.getters.getAllPosts)
+  }
 
 }
 </script>
 
 <style>
   
-  .title {
-    margin-top: 50px;
-  }
+ .holder {
+   display: flex;
+   flex-wrap: wrap;
+ }
 
-  .desc {
+
+  .posts {
+    width: 300px;
+    margin-top: 5%;
+    margin-left: 5%;
     text-align: center;
-    padding: 20px;
-    border: 1px solid #00ff00;
+    padding: 5px;
+    color: grey;
     border-radius: 4px;
-    box-shadow: 1px 18px 40px -9px rgba(0, 0, 0, 0.247);
+    box-shadow: 1px 18px 40px -9px rgba(0, 0, 0, 0.349);
   }
+  
 </style>

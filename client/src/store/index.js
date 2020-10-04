@@ -6,12 +6,31 @@ import { createStore } from 'vuex';
 export default createStore({
   state: {
     posts: [
-    ]
+      {
+        id: 1,
+        title: "my first post",
+        description: 'my first post'
+      }, 
+      {
+        id: 2,
+        title: 'docker in a high pace world',
+        description: 'click to see more'
+      }, 
+      {
+        id: 3,
+        title: 'my new post',
+        description: 'a newer post'
+      }
+    ],
+    user: {}
   },
 
   // mutations are funtions that affect the STATE.
   // conventtion that all mutation method names are in all caps.
   mutations: {
+    ADD_POST(state, post) {
+      state.posts.push(post)
+    }
     
   },
 

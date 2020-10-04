@@ -35,7 +35,7 @@
   text-decoration: none;
   color: rgb(180, 180, 180);
   font-weight: bold;
-  font-size: 10pt;
+  font-size: 11pt;
 }
 
 #nav a.router-link-exact-active {
