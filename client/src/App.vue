@@ -14,6 +14,7 @@
         <li><a href="https://www.instagram.com/mynameissymi/"><i class="fab fa-instagram-square fa-2x"></i></a></li>
         <li><a href="https://www.linkedin.com/in/symien-moore/"><i class="fab fa-linkedin fa-2x"></i></a></li>
       </ul>
+      <p class="final">built with 💛 & javascript</p>
 </div>
 </template>
 
@@ -59,6 +60,10 @@
   .links li a {
     color: #00C3EE;
     
+  }
+
+  .final {
+    font-size: 9px;
   }
  @media only screen and (max-width: 500px) {
    .mobile-nav {

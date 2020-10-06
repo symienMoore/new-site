@@ -112,6 +112,7 @@ export default {
     box-shadow: 1px 18px 40px -9px rgba(0, 0, 0, 0.349); 
     border: none;
     text-align: center;
+    font-size: 13px;
   }
 
   @media only screen and (max-width: 500px) {
@@ -121,7 +122,6 @@ export default {
 
     .bio {
       width: 200px;
-      text-align: center;
       margin-left: 10%;
     }
 
