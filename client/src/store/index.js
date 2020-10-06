@@ -1,6 +1,6 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
-// const url = 'localhost:3030';
+// const url = 'http://localhost:3030';
 // const headers = { Accept: 'application/json' };
 // const url = 'https://jsonplaceholder.typicode.com/posts';
 export default createStore({

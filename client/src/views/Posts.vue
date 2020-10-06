@@ -32,11 +32,10 @@ export default {
     width: 300px;
     margin-top: 5%;
     margin-left: 5%;
-    text-align: center;
     padding: 5px;
     color: gray;
+    border: 1px solid #00ff00;
     border-radius: 4px;
-    box-shadow: 1px 18px 40px -9px rgba(0, 0, 0, 0.349);
   }
   
 </style>

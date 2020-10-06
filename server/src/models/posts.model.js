@@ -6,11 +6,17 @@ const DataTypes = Sequelize.DataTypes;
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const posts = sequelizeClient.define('posts', {
-    text: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false
-    }
-  }, {
+    },
+
+    body: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+  },
+   {
     hooks: {
       beforeCount(options) {
         options.raw = true;
