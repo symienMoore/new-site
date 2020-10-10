@@ -5,23 +5,6 @@ import axios from 'axios';
 // const url = 'https://jsonplaceholder.typicode.com/posts';
 export default createStore({
   state: {
-    posts: [
-      // {
-      //   id: 1,
-      //   title: "my first post",
-      //   description: 'my first post'
-      // }, 
-      // {
-      //   id: 2,
-      //   title: 'docker in a high pace world',
-      //   description: 'click to see more'
-      // }, 
-      // {
-      //   id: 3,
-      //   title: 'my new post',
-      //   description: 'a newer post'
-      // }
-    ]
   },
 
   // actions are functions that are called throughout app that call mutations.

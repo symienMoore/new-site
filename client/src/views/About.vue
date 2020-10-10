@@ -50,10 +50,7 @@ export default {
 
 .about {
   margin-top: 100px;
-}
-
-.laptop {
-  border: 1px solid #00ff00;
+  font-size: 13px;
 }
 
  @media only screen and (max-width: 500px) {

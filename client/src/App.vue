@@ -64,6 +64,7 @@
 
   .final {
     font-size: 9px;
+    text-align: center;
   }
  @media only screen and (max-width: 500px) {
    .mobile-nav {
@@ -73,6 +74,10 @@
 
    #nav {
      display: none;
+   }
+
+   .links {
+     margin-left: 14%;
    }
  }
 </style>
