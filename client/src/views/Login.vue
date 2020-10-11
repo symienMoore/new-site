@@ -21,7 +21,18 @@
 
 <script>
     export default {
+        data () {
+            return {
+                user: {
+                    email: '',
+                    password: ''
+                }
+            }
+        },
         
+        methods: {
+            
+        }
     }
 </script>
 
