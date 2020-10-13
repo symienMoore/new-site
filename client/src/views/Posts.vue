@@ -9,13 +9,19 @@
 <script>
 import { mapState } from 'vuex'
 export default {
+  default() {
+    return {
+      posts: []
+    }
+  },
+  
   mounted() {
-    this.$store.dispatch('fetchPosts')
+    this.posts = this.$store.dispatch('posts/fetchPosts')
   },
 
-  computed: mapState([
-    'posts'
-  ])
+  computed: mapState({
+    posts: state => state.posts.all
+  })
 
 }
 </script>
