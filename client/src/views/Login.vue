@@ -20,6 +20,7 @@
 </template>
 
 <script>
+    // import { mapActions } from 'vuex';
     export default {
         data () {
             return {
@@ -31,10 +32,12 @@
         methods: {
             doUserLogin() {
                 const user = {
+                  strategy: 'local',  
                   email: this.email,
                   password: this.password
                 }
                 console.log(user)
+                this.$store.dispatch('users/login', user)
             }
         }
     }

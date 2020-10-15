@@ -5,7 +5,7 @@ export const postModule = {
     namespaced: true,
 
     state: {
-        posts: []
+      posts: [{id: 1, title: 'test', description: 'test'}]
     },
 
     mutations: {
@@ -16,7 +16,6 @@ export const postModule = {
 
     getters: {
         getAllPosts: state => {
-            console.log(state)
             return state.posts
           }
     },
@@ -24,11 +23,13 @@ export const postModule = {
     actions: {
         async fetchPosts({ commit }) {
             await axios.get('http://jsonplaceholder.typicode.com/posts')
-              .then(posts => posts.data)
               .then(posts => {
-                console.log(posts)
-              commit('ADD_POSTS', posts)
+              commit('ADD_POSTS', posts.data)
             })
-          }
+      },
+      
+      myTestFunc() {
+        console.log('test successful')
+      }
     }
 }

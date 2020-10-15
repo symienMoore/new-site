@@ -1,27 +1,35 @@
 <template>
   <div class="holder">
+  <button @click="callMethodByBtn">test</button>
     <div v-for="post in posts" :key="post.id" class="posts">
-        <h4 class="title">{{ post.title }}</h4>
+        <h5 class="title">{{ post.title }}</h5>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 export default {
-  default() {
-    return {
-      posts: []
-    }
-  },
-  
-  mounted() {
-    this.posts = this.$store.dispatch('posts/fetchPosts')
+
+  computed: {
+    ...mapState({
+      posts: state => state.posts.posts
+    })
   },
 
-  computed: mapState({
-    posts: state => state.posts.all
-  })
+  mounted() {
+    this.$store.dispatch('posts/fetchPosts')
+  },
+
+  methods: {
+    ...mapActions({
+      testFunc: 'posts/myTestFunc'
+    }),
+
+    callMethodByBtn() {
+      this.testFunc()
+    }
+  }
 
 }
 </script>
