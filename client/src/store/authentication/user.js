@@ -1,8 +1,8 @@
 import axios from 'axios';
-const headers = {
-    'content-type': 'application/json',
+// const headers = {
+//     accept: 'application/json',
 
-};
+// };
 export const userModule = {
     namespaced: true,
 
@@ -20,9 +20,9 @@ export const userModule = {
     actions: {
         login(user) {
             console.log(user.email)
-            axios.post('http://localhost:3030/authentication', {strategy: user.strategy, email: user.email, password: user.password}, headers)
+            axios.post('http://localhost:3030/authentication', user)
                 .then(res => {
-                    console.log(res)
+                console.log(res)
             })
         }
     }
