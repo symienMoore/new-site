@@ -1,0 +1,31 @@
+.card-holder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    margin: 50px;
+    transition: 1s;
+}
+
+.card:hover {
+    border: 1px solid white;
+    box-shadow: 0px 10px 30px 5px lightgrey;
+}
+
+p {
+    font-size: 14px;
+}
+
+a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0070f3;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0070f3;
+}

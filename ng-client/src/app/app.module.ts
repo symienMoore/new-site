@@ -15,6 +15,7 @@ import { EditPostComponent } from './pages/edit-post/edit-post.component';
 import { AddPostComponent } from './pages/add-post/add-post.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InvalidComponent } from './components/alerts/invalid/invalid.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { InvalidComponent } from './components/alerts/invalid/invalid.component'
     EditPostComponent,
     AddPostComponent,
     NavbarComponent,
-    InvalidComponent
+    InvalidComponent,
+    ButtonComponent
   ],
   imports: [
     HttpClientModule,

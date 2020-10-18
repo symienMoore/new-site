@@ -19,13 +19,6 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.test()
-  }
-
-  test() {
-    this.service.test().subscribe(res => {
-      console.log(res)
-    })
   }
 
   login() {

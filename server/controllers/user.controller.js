@@ -1,4 +1,5 @@
 var User = require('../models/User');
+var jwt = require('jsonwebtoken');
 
 exports.userSignIn = async function(req, res) {
     if(req.body.email && req.body.password){

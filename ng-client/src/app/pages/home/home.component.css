@@ -1,7 +1,7 @@
 
 .hero{
     width: 100%;
-    font-family: poppins;
+    font-family: inter;
     background-image: url('../../../assets/mountainlg.jpg');
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -20,6 +20,10 @@
 
 .tool-about {
     margin-top: 70px;
+}
+
+.frontend-title {
+    font-family: inter;
 }
 
 .tech-list {
