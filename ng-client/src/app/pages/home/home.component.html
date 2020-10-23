@@ -1,0 +1,61 @@
+
+<div class="hero">
+    <h3 class="hero-text">
+        I build well designed, scalable web applications <br>
+        for people with cool ideas.
+    </h3>
+ </div>
+<div class="container">
+  <p class="date">
+    {{ date | date }}
+  </p>
+    <p class="tool-about">
+        I am always looking to expand my skills as a developer, and the world 
+        of programming genuinely interests me. Because of this, I am constantly
+        working to improve and learn new skills and technologies. Below are lists of
+        tools I use to build new wep applications and ensure reliability.
+    </p>
+    <h3 class="frontend-title">Technologies</h3>
+    <div class="tech-list row">
+        <ul class="col-md">
+            <h5 >Frontend</h5>
+            <li>angular</li>
+            <li>vue</li>
+            <li>nuxt</li>
+            <li>react</li>
+        </ul>
+        <ul class="col-md">
+            <h5>Backend</h5>
+            <li>node js</li>
+            <li>spring boot</li>
+            <li>ruby on rails</li>
+            <li>django</li>
+        </ul>
+        <ul class="col-md">
+            <h5>DevOps</h5>
+            <li>circle ci</li>
+            <li>gitlab</li>
+            <li>google cloud platform</li>
+            <li>docker</li>
+            <li>kubernetes</li>
+            <li>azure</li>
+        </ul>
+    </div>
+    <h3>Projects</h3>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Project Name</th>
+            <th>Description</th>
+            <th scope="col">Language</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let repo of repos">
+            <th scope="row">{{ repo.name }}</th>
+            <td>{{ repo.description }}</td>
+            <td>{{ repo.language }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
