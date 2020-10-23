@@ -16,3 +16,17 @@ exports.userSignIn = async function(req, res) {
       res.status(400).send({error: "email and password are required!"});
     }
 }
+
+exports.getUserProfile = async (req, res) => {
+  try {
+    user = req.user.id;
+    await User.findOne({_id: user}).then(async (user) => {
+      await res.send(user)
+      console.log(user)
+    })
+  } catch (error) {
+    data = {err: error.message, status: 500}
+    res.send(data)
+    console.log(data)
+  }   
+}

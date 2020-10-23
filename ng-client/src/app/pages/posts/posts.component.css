@@ -29,3 +29,14 @@ a:hover {
     text-decoration: none;
     color: #0070f3;
 }
+
+@media only screen and (max-width: 600px) {
+    .card-holder {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .card {
+        margin: 13px;
+    }
+}

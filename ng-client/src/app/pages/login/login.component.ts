@@ -31,6 +31,8 @@ export class LoginComponent implements OnInit {
       this.invalidForm = true;
     } else {
       this.service.doLogin(user).subscribe(res => {
+        localStorage.setItem('authtoken', res['token']);
+        this.router.navigate(['/profile']);
         console.log(res);
       })
       this.router.navigate(['profile'])

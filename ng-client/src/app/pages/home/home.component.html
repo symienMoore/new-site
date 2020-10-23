@@ -6,6 +6,9 @@
     </h3>
  </div>
 <div class="container">
+  <p class="date">
+    {{ date | date }}
+  </p>
     <p class="tool-about">
         I am always looking to expand my skills as a developer, and the world 
         of programming genuinely interests me. Because of this, I am constantly
@@ -42,29 +45,16 @@
     <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Project Name</th>
+            <th>Description</th>
             <th scope="col">Language</th>
-            <th scope="col">Handle</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
+          <tr *ngFor="let repo of repos">
+            <th scope="row">{{ repo.name }}</th>
+            <td>{{ repo.description }}</td>
+            <td>{{ repo.language }}</td>
           </tr>
         </tbody>
       </table>
