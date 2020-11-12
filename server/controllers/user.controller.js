@@ -1,6 +1,23 @@
 var User = require('../models/User');
 var jwt = require('jsonwebtoken');
 
+exports.registerUser = async (req, res) => {
+  try {
+    const url = req.protocol + '://' + req.get("host");
+    await User.create({
+      name: req.body.name,
+      username: req.body.username,
+      email: req.body.email,
+      password: req.body.password
+    })
+    res.send("user added!")
+  } catch (error) {
+    res.send(error)
+    console.log(error)
+  }
+}
+    
+
 exports.userSignIn = async function(req, res) {
     if(req.body.email && req.body.password){
         await User.authenticate(req.body.email, req.body.password, (err, user) => {

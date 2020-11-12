@@ -9,6 +9,6 @@ export class GithubService {
   constructor(private http: HttpClient) { }
 
   getResponse() {
-    return this.http.get('https://api.github.com/users/symienMoore/repos');
+    return this.http.get('http://localhost:3000/api/github');
   }
 }

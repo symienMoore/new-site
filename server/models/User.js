@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
+const post = require('./Post');
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -28,7 +29,12 @@ const userSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
-    }
+    },
+
+    posts: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "post"
+    }]
     
 })
 

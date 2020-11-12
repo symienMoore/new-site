@@ -21,7 +21,7 @@
     font-weight: bold;
     font: inter;
     margin-top: 80px;
-    margin-left: 37%;
+    margin-left: 38%;
     border: 1px solid #0070f3;
     color: #0070f3;
     width: 120px;
@@ -44,4 +44,14 @@
 ul li {
     font-size: .8em;
     margin-left: 20px;
+}
+
+.p-name {
+    color: #0070f3;
+}
+
+@media only screen and (max-width: 600px) {
+    .date {
+        margin-left: 30%;
+    }
 }

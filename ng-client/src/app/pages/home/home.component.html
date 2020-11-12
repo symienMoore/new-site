@@ -52,7 +52,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let repo of repos">
-            <th scope="row">{{ repo.name }}</th>
+            <th scope="row"><a href="{{ repo.html_url }}">{{ repo.name }}</a></th>
             <td>{{ repo.description }}</td>
             <td>{{ repo.language }}</td>
           </tr>

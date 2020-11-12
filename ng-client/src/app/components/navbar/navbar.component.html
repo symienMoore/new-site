@@ -8,5 +8,8 @@
     <li ngbNavItem>
       <a ngbNavLink [routerLink]="['/posts']">Posts</a>
     </li>
-  </ul>
+    <li ngbNavItem *ngIf="loggedIn">
+      <a ngbNavLink [routerLink]="['/profile']">Profile</a>
+    </li>
+</ul>
   <!-- <div [ngbNavOutlet]="nav"></div> -->

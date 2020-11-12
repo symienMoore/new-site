@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const user = require('./User');
 
 const postSchema = new mongoose.Schema({
     title: {
@@ -24,6 +25,11 @@ const postSchema = new mongoose.Schema({
     created_at: {
         type: Date,
         default: Date.now
+    }, 
+
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "user"
     }
 })
 

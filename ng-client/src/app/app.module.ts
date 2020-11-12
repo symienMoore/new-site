@@ -17,6 +17,7 @@ import { AddPostComponent } from './pages/add-post/add-post.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InvalidComponent } from './components/alerts/invalid/invalid.component';
 import { ButtonComponent } from './components/button/button.component';
+import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ButtonComponent } from './components/button/button.component';
     AddPostComponent,
     NavbarComponent,
     InvalidComponent,
-    ButtonComponent
+    ButtonComponent,
+    PostDetailComponent
   ],
   imports: [
     HttpClientModule,
