@@ -1,0 +1,16 @@
+h1 {
+    margin-top: 20%;
+    font-family: inter;
+    font-weight: bold;
+}
+
+button {
+    outline: none;
+    border: none;
+    font-size:14px;
+    padding: 8px;
+    width: 200px;
+    background: #0070F3;
+    color: white;
+    box-shadow: 0px 5px 10px 0px #0071f37e;
+}
