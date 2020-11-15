@@ -15,11 +15,11 @@ export class AuthService {
   }
 
   doLogin(user) {
-    return this.http.post('http://localhost:3000/users/login', user)
+    return this.http.post('https://symi-services.uk.r.appspot.com/users/login', user)
   }
 
   getUserProfile() {
-    return this.http.get('http://localhost:3000/users/profile')
+    return this.http.get('https://symi-services.uk.r.appspot.com/users/profile')
   }
 }
 

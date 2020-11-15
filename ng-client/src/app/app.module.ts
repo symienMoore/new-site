@@ -18,6 +18,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { InvalidComponent } from './components/alerts/invalid/invalid.component';
 import { ButtonComponent } from './components/button/button.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { PostDetailComponent } from './pages/post-detail/post-detail.component';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    AgGridModule.withComponents([])
   ],
   providers: [
     {

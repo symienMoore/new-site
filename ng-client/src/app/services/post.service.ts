@@ -5,7 +5,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PostService {
-  API_URL = "http://localhost:3000"
+  API_URL = "https://symi-services.uk.r.appspot.com";
+  test_url = 'http://localhost:3030';
+  
   constructor(private http: HttpClient) { }
 
   getAllPosts() {
@@ -18,7 +20,7 @@ export class PostService {
 
 
   addPost(post) {
-    return this.http.post('http://localhost:3000/posts/new-post', post)
+    return this.http.post(`${this.API_URL}/posts/new-post`, post)
   }
 
 

@@ -9,6 +9,7 @@ export class GithubService {
   constructor(private http: HttpClient) { }
 
   getResponse() {
-    return this.http.get('http://localhost:3000/api/github');
+    return this.http.get('https://symi-services.uk.r.appspot.com/api/github');
   }
+
 }
