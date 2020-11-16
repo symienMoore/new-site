@@ -9,7 +9,9 @@ import { PostService } from '../../services/post.service';
 export class PostsComponent implements OnInit {
 
   posts: any = []
-
+  page = 1;
+  pageSize = 9;
+  
   constructor(private service: PostService) { }
 
   ngOnInit(): void {

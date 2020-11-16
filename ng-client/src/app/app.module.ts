@@ -19,6 +19,9 @@ import { InvalidComponent } from './components/alerts/invalid/invalid.component'
 import { ButtonComponent } from './components/button/button.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { NetworkComponent } from './pages/network/network.component';
+import { OperationsComponent } from './pages/operations/operations.component';
+import { ProgrammingComponent } from './pages/programming/programming.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { AgGridModule } from 'ag-grid-angular';
     NavbarComponent,
     InvalidComponent,
     ButtonComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    NetworkComponent,
+    OperationsComponent,
+    ProgrammingComponent
   ],
   imports: [
     HttpClientModule,

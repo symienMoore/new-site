@@ -9,7 +9,8 @@ import { GithubService } from '../../services/github.service';
 export class HomeComponent implements OnInit {
   repos: any = [];
   date = new Date();
-  
+  page = 1;
+  pageSize = 5;
   constructor(private service: GithubService) { }
 
   ngOnInit(): void {

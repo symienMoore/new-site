@@ -11,7 +11,7 @@ export class PostService {
   constructor(private http: HttpClient) { }
 
   getAllPosts() {
-    return this.http.get(`${this.API_URL}/posts/all`)
+    return this.http.get<any[]>(`${this.API_URL}/posts/all`)
   }
 
   getPostById(id) {

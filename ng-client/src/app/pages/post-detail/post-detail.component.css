@@ -5,3 +5,8 @@ h1 {
 .post-date {
     color: #0070f3;
 }
+
+.category {
+    font-weight: bold;
+    color: lightgrey;
+}

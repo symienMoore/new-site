@@ -51,11 +51,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let repo of repos">
+          <tr *ngFor="let repo of repos | slice: (page-1) * pageSize : page * pageSize">
             <th scope="row"><a href="{{ repo.html_url }}">{{ repo.name }}</a></th>
             <td>{{ repo.description }}</td>
             <td>{{ repo.language }}</td>
           </tr>
         </tbody>
       </table>
+      <ngb-pagination
+      [(page)]="page"
+      [pageSize]="pageSize"
+      [collectionSize]="repos.length"
+      [boundaryLinks]="true">
+      </ngb-pagination>   
 </div>
