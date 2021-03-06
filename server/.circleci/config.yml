@@ -4,8 +4,6 @@ jobs:
   build:
     docker:
       - image: circleci/node:latest
-    working_directory: ~/project
     steps:
       - checkout
-      - run: cd server
       - run: npm test
