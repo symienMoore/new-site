@@ -8,4 +8,5 @@ jobs:
     steps:
       - checkout
       - run: pwd
-      - run: ls 
+      - run: cd server
+      - run: npm test
