@@ -7,5 +7,4 @@ jobs:
     steps:
       - checkout
       - run: cd server
-      - run: pwd
-      - run: npm test
+      - run: echo whereami
