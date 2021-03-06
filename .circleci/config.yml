@@ -4,7 +4,8 @@ jobs:
   build:
     docker:
       - image: circleci/node:latest
+    working_directory: ~/
     steps:
       - checkout
       - run: cd server
-      - run: echo whereami
+      - run: pwd
