@@ -6,5 +6,6 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: "cd server"
+      - run: cd server
       - run: pwd
+      - run: npm test
