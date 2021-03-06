@@ -4,6 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:latest
+    working_directory: ./
     steps:
       - checkout
       - run: pwd
