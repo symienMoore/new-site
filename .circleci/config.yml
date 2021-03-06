@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:latest
-    working_directory: ./
+    working_directory: ~/site-template
     steps:
       - checkout
       - run: pwd
