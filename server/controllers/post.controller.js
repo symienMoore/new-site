@@ -1,5 +1,5 @@
-var Post = require('../models/Post');
-var User = require('../models/User');
+const Post = require('../models/Post');
+const User = require('../models/User');
 
 exports.addPost = async (req, res) => {
     try {
