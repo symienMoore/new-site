@@ -4,8 +4,12 @@ const gitController = require('../controllers/api.controller');
 const cron = require('node-cron');
 const axios = require('axios');
 const Repo = require('../models/Repository');
+const mongoose = require('mongoose');
+const mongo = mongoose.connection;
 
-cron.schedule('0 9 * * 1', async function() {
+
+cron.schedule('0 0 * * 1' , async function () {
+  erase();
     console.log('updating repositories...');
     // router.get('/github', gitController.getGithubData);
     try {
@@ -31,7 +35,7 @@ function onSuccess(response) {
        let desc = array.data[i].description;
        let url = array.data[i].html_url;
        const language = array.data[i].language;
-      console.log( name + " " + desc + " " + url);
+      console.log( name + " " + desc + " " + url + " " + language);
 
       assignDataValue(name, desc, url, language)
 
@@ -39,13 +43,24 @@ function onSuccess(response) {
 }
 
 function assignDataValue(name, desc, url, language) {
-
     let upData = new Repo()
        upData.name = name;
        upData.description = desc;
        upData.url = url;
        upData.language = language;
- 
        upData.save();
  }
+
+function erase() {
+  mongo.dropCollection('repositories', function (err, result) {
+    if (err) {
+        console.log(`Couldn't delete the collection repositories`);
+    } else {
+        console.log(`repositories was deleted`);
+    }
+  });
+}
+
+router.get('/github', gitController.getGithubData);
+
 module.exports = router;
