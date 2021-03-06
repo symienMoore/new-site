@@ -9,4 +9,5 @@ jobs:
       - checkout
       - run: pwd
       - run: cd server
+      - run: pwd
       - run: npm test
