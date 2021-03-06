@@ -1,0 +1,10 @@
+version: 2.1
+
+jobs:
+  build_server:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run: "cd server"
+      - run: pwd
