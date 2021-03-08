@@ -16,7 +16,7 @@ jobs:
     steps:
       - checkout
       - run: cd ng-client && pwd
-      - run: npm i -g @angular/cli
+      - run: sudo npm i -g @angular/cli
 workflows:
   version: 2
   build_server_and_client:
